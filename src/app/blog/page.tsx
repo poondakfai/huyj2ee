@@ -13,7 +13,7 @@ export default async function Blogs({searchParams}: {searchParams: BlogsParams})
   return (
     <div className='blog-list'>
       <BlogList blogs={blogs} />
-      <PaginationBar urlPrefix='/blog' pageCount={pageCount} page={p} />
+      <PaginationBar urlPrefix='/blog?' pageCount={pageCount} page={p} />
     </div>
   );
 }

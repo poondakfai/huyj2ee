@@ -15,7 +15,7 @@ export default function PaginationBar({ urlPrefix, pageCount, page } : Paginatio
         page === 1 ?
           (
             <div className='more-blog'>
-              <Link href={urlPrefix + '?page=' + (page + 1)} title='Next page'><AiOutlineRight /></Link>
+              <Link href={urlPrefix + 'page=' + (page + 1)} title='Next page'><AiOutlineRight /></Link>
             </div>
           )
           :
@@ -23,15 +23,15 @@ export default function PaginationBar({ urlPrefix, pageCount, page } : Paginatio
             page === pageCount ?
               (
                 <div className='more-blog'>
-                  <Link href={urlPrefix + '?page=' + (page - 1)} title='Previous page'><AiOutlineLeft /></Link>
+                  <Link href={urlPrefix + 'page=' + (page - 1)} title='Previous page'><AiOutlineLeft /></Link>
                 </div>
               )
               :
               (
                 <div className='more-blog'>
-                  <Link href={urlPrefix + '?page=' + (page - 1)} title='Previous page'><AiOutlineLeft /></Link>
+                  <Link href={urlPrefix + 'page=' + (page - 1)} title='Previous page'><AiOutlineLeft /></Link>
                   &nbsp;
-                  <Link href={urlPrefix + '?page=' + (page + 1)} title='Next page'><AiOutlineRight /></Link>
+                  <Link href={urlPrefix + 'page=' + (page + 1)} title='Next page'><AiOutlineRight /></Link>
                 </div>
               )
           )
