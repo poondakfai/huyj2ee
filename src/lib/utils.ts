@@ -1,13 +1,19 @@
 import Database from 'better-sqlite3';
 import path from 'path';
 import lemmatizer from 'wink-lemmatizer';
+import { JSDOM } from 'jsdom';
+import createDOMPurify from 'dompurify';
 
 const LIMIT = 5;
+
 const dbPath = path.join(process.cwd(), 'blog.db');
 const db = new Database(dbPath, { readonly: true });
 db.function('REGEXP', (pattern, value) => {
   return (new RegExp(pattern, 'i').test(value)) ? 1 : 0;
 });
+
+const window = new JSDOM('').window;
+export const DOMPurify = createDOMPurify(window);
 
 export type SlugParams = {
   slug: number
