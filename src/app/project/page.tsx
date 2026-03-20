@@ -9,7 +9,7 @@ export default function Projects() {
       <div className='project-body'>
         <h3 className='project-heading'>{project.name}</h3>
         <p className='project-brief-desc'>{project.brief}</p>
-        <Link className='project-view-detail' href={'/project/' + project.slug} target='_blank' rel='noopener noreferrer'>View detail</Link>
+        <Link className='project-view-detail' href={'/project/' + project.slug}>View detail</Link>
       </div>  
     </div>
   ));

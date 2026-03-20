@@ -1,12 +1,10 @@
-import Document from '@/components/ui/Document';
-import { DOMPurify, loadCV } from '@/lib/utils';
+import { loadCV, loadHome } from '@/lib/utils';
 
-export default function CV() {
-  const cvcontent: string = DOMPurify.sanitize(loadCV());
-
+export default function Contact() {
+  const cvcontent: string = loadCV();
   return (
-    <Document>
-      <div dangerouslySetInnerHTML={{__html: cvcontent}} className='document'/>
-    </Document>
+    <div className="document-container">
+      <div dangerouslySetInnerHTML={{__html: cvcontent}} className="document" />
+    </div>
   );
 }
