@@ -131,7 +131,7 @@ html {
 }
 
 #content .content-section {
-  width: 848px;
+  max-width: 848px;
   padding: 64px 0;
   margin-left: auto;
   margin-right: auto;
@@ -250,7 +250,7 @@ html {
 }
 
 .blog-list {
-  width: 848px;
+  max-width: 848px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 48px;
@@ -296,7 +296,7 @@ html {
 }
 
 .document-container {
-  width: 848px;
+  max-width: 848px;
   margin-left:auto;
   margin-right:auto;
   padding-top:64px;
